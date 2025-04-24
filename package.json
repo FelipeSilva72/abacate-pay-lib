@@ -1,5 +1,5 @@
 {
-  "name": "@felipesilva720/abacate-pay-lib",
+  "name": "@felipesilva720/abacate-pay-sdk",
   "version": "1.0.0",
   "main": "build/index.js",
   "types": "build/index.d.ts",
