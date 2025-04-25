@@ -5,3 +5,6 @@ export const urls = {
       `https://api.abacatepay.com/v1/pixQrCode/check?id=${id}`,
   },
 };
+
+export * from "./classes/index";
+export * from "./types/index";
