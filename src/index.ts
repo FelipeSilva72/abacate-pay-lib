@@ -1,6 +1,6 @@
 import axios from "axios";
-import { CheckQRCode, ResponseCheckQrCode } from "types/qrcode/check";
-import { CreateQRCode, ResponseCreateQrCode } from "types/qrcode/create";
+import { CheckQRCode, ResponseCheckQrCode } from "./types/qrcode/check";
+import { CreateQRCode, ResponseCreateQrCode } from "./types/qrcode/create";
 
 const urls = {
   pixQrCode: {

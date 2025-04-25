@@ -1,9 +1,11 @@
 {
   "name": "@felipesilva720/abacate-pay-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "scripts": {
     "check": "tsc --noEmit && echo ✔ Ok",
     "build": "tsc",
