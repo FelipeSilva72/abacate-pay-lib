@@ -5,14 +5,17 @@ export interface SimulatePaymentQRCode {
 }
 
 export interface SimulatePaymentResponseQRCode {
-  id: string;
-  amount: number;
-  status: Status;
-  devMode: boolean;
-  brCode: string;
-  brCodeBase64: string;
-  platformFee: number;
-  createdAt: string;
-  updatedAt: string;
-  expiresAt: string;
+  data: {
+    id: string;
+    amount: number;
+    status: Status;
+    devMode: boolean;
+    brCode: string;
+    brCodeBase64: string;
+    platformFee: number;
+    createdAt: string;
+    updatedAt: string;
+    expiresAt: string;
+  };
+  error: string;
 }

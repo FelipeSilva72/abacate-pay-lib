@@ -4,6 +4,8 @@ import {
   CreateQRCode,
   ResponseCheckQrCode,
   ResponseCreateQrCode,
+  SimulatePaymentQRCode,
+  SimulatePaymentResponseQRCode,
 } from "types";
 import { urls } from "../index";
 
@@ -40,6 +42,25 @@ export class Qrcode {
   public async check(data: CheckQRCode) {
     const response = await axios.get<ResponseCheckQrCode>(
       urls.pixQrCode.check(data.id),
+      {
+        headers: {
+          Authorization: `Bearer ${this.token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    return response.data;
+  }
+  /**
+   * Simula o pagamento de um QRCode Pix criado no modo de desenvolvimento.
+   * @param data
+   * @returns
+   */
+  public async simulatePayment(data: SimulatePaymentQRCode) {
+    const response = await axios.post<SimulatePaymentResponseQRCode>(
+      urls.pixQrCode.simulatePayment,
+      data,
       {
         headers: {
           Authorization: `Bearer ${this.token}`,
